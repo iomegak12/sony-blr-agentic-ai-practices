@@ -1,0 +1,4 @@
+Design a GenAI Application using LangChain, that allows users to get recent 
+products by invoking appropriate tools, and sum of units available of those products. 
+then prepare an email subject and body, which needs to be sent to inventory@ref-info.com
+
