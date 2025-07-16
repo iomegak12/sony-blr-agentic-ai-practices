@@ -25,6 +25,7 @@ if not pinecone_index_name:
 def create_embeddings():
     embeddings = OpenAIEmbeddings(
         model="text-embedding-3-large",
+        dimensions=1024,
         openai_api_key=openai_api_key
     )
 
