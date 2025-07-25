@@ -1,0 +1,29 @@
+{
+  "name": "customers-management",
+  "version": "1.0.0",
+  "description": "A Node.js library for customer CRUD operations with MongoDB",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": [
+    "customers",
+    "mongodb",
+    "mongoose",
+    "crud",
+    "validation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^8.0.0",
+    "joi": "^17.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

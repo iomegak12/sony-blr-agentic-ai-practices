@@ -1,0 +1,16 @@
+langgraph
+langchain
+langchain-core
+langchain-community
+langchain-openai
+langchain-ollama
+pydantic
+python-dotenv
+chromadb
+tiktoken
+ipykernel
+beautifulsoup4
+tavily-python
+fastapi
+uvicorn[standard]
+loguru

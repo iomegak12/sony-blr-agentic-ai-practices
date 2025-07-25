@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-RAG API Interface</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">Self-RAG API</div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-section="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-section="chat">Chat</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-section="health">Health Status</a>
+                </li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="themeToggle">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="container">
+                <div class="hero">
+                    <h1>Welcome to Self-RAG API</h1>
+                    <p class="hero-subtitle">A powerful Retrieval-Augmented Generation system with self-reflection capabilities</p>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <h3>🤖 Intelligent Responses</h3>
+                            <p>Get accurate and contextual answers powered by advanced RAG technology</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>🔍 Self-Reflection</h3>
+                            <p>Built-in quality assessment and improvement mechanisms</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>🌐 URL Integration</h3>
+                            <p>Incorporate external web sources as data inputs</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>⚡ Fast & Reliable</h3>
+                            <p>High-performance API with comprehensive monitoring</p>
+                        </div>
+                    </div>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary" onclick="navigateToSection('chat')">Start Chatting</button>
+                        <button class="btn btn-secondary" onclick="navigateToSection('health')">Check Health</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chat Section -->
+        <section id="chat" class="section">
+            <div class="container">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <h2>Chat with Self-RAG</h2>
+                        <p>Ask questions and get intelligent responses</p>
+                    </div>
+                    
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message system-message">
+                            <div class="message-content">
+                                <p>Welcome! I'm ready to help you with your questions. You can also provide URLs as additional data sources.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input-container">
+                        <div class="url-input-section">
+                            <label for="urlInput">Optional URLs (one per line):</label>
+                            <textarea id="urlInput" placeholder="https://example.com/page1&#10;https://example.com/page2" rows="2"></textarea>
+                        </div>
+                        <div class="message-input-section">
+                            <div class="input-group">
+                                <textarea id="messageInput" placeholder="Type your question here..." rows="1"></textarea>
+                                <button id="sendButton" class="btn btn-primary">
+                                    <span class="send-text">Send</span>
+                                    <span class="loading-spinner" style="display: none;">⏳</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Health Section -->
+        <section id="health" class="section">
+            <div class="container">
+                <div class="health-container">
+                    <div class="health-header">
+                        <h2>API Health Status</h2>
+                        <p>Monitor the current status and performance of the Self-RAG API</p>
+                        <button id="refreshHealth" class="btn btn-secondary">Refresh Status</button>
+                    </div>
+                    
+                    <div class="health-status" id="healthStatus">
+                        <div class="status-card loading">
+                            <div class="status-indicator">
+                                <div class="spinner"></div>
+                            </div>
+                            <div class="status-info">
+                                <h3>Checking API Status...</h3>
+                                <p>Please wait while we verify the connection</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="health-details" id="healthDetails">
+                        <!-- Health details will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Self-RAG API. Built with FastAPI and LangGraph.</p>
+        </div>
+    </footer>
+
+    <script src="static/js/app.js"></script>
+</body>
+</html>

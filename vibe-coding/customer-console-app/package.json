@@ -1,0 +1,23 @@
+{
+  "name": "customer-console-app",
+  "version": "1.0.0",
+  "description": "Console application for customer management using customers-management library",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "customer",
+    "management",
+    "console",
+    "cli",
+    "crud"
+  ],
+  "author": "SONY Agentic AI",
+  "license": "MIT",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
